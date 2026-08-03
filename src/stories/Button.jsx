@@ -1,39 +1,36 @@
 import React from 'react';
+import './Button.css';
 
-import PropTypes from 'prop-types';
-
-import './button.css';
-
-/** Primary UI component for user interaction */
 export const Button = ({
-  primary = false,
-  backgroundColor = null,
-  size = 'medium',
-  label,
-  ...props
+    children = 'Button',
+    variant = 'primary',
+    disabled = false,
+    icon = false,
+    onClick,
+    ...props
 }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
-
-Button.propTypes = {
-  /** Is this the principal call to action on the page? */
-  primary: PropTypes.bool,
-  /** What background color to use */
-  backgroundColor: PropTypes.string,
-  /** How large should the button be? */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /** Button contents */
-  label: PropTypes.string.isRequired,
-  /** Optional click handler */
-  onClick: PropTypes.func,
+    return (
+        <button
+            className={`custom-btn btn-${variant}`}
+            disabled={disabled}
+            onClick={onClick}
+            {...props}
+        >
+            <span>{children}</span>
+            {icon && (
+                <svg
+                    className="btn-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                </svg>
+            )}
+        </button>
+    );
 };
