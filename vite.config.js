@@ -12,9 +12,23 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), babel({
-    presets: [reactCompilerPreset()]
-  })],
+  plugins: [react()],
+  build: {
+    lib: {
+      entry: path.resolve(dirname, 'src/index.js'),
+      name: 'HmikProjectStorybook',
+      fileName: (format) => `hmik-project-storybook.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
+  },
   test: {
     projects: [{
       extends: true,

@@ -3,6 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/hmik-project-storybook.umd.js",
+  "module": "./dist/hmik-project-storybook.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/hmik-project-storybook.es.js",
+      "require": "./dist/hmik-project-storybook.umd.js"
+    },
+    "./dist/hmik-project-storybook.css": "./dist/hmik-project-storybook.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +23,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
