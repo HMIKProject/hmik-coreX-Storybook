@@ -3,7 +3,7 @@ import Icon from "./StructureIcon";
 export default {
   title: "Atomic/Icon/Structure",
   component: Icon,
-  Tags: ['autodocs'],
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

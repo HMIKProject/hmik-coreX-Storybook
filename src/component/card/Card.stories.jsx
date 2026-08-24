@@ -5,7 +5,7 @@ import Image from "../../assets/image.svg";
 export default {
     title: "Atomic/Card/Card Primary",
     component: Card,
-    Tags: ['autodocs'],
+    tags: ['autodocs'],
 };
 
 export const Default = {

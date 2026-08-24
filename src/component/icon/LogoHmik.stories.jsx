@@ -3,7 +3,7 @@ import LogoHmik from "./LogoHmik";
 export default {
   title: "Atomic/Icon/Logo HMIK",
   component: LogoHmik,
-  Tags: ['autodocs'],
+  tags: ['autodocs'],
 
   argTypes: {
     width: {
