@@ -3,6 +3,7 @@ import Icon from "./RistekIcon";
 export default {
   title: "Atomic/Icon/Ristek",
   component: Icon,
+  Tags: ['autodocs'],
 
   argTypes: {
     width: {

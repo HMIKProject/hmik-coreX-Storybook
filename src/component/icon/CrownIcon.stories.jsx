@@ -3,6 +3,7 @@ import Icon from "./CrownIcon";
 export default {
   title: "Atomic/Icon/Crown",
   component: Icon,
+  Tags: ['autodocs'],
 
   argTypes: {
     width: {

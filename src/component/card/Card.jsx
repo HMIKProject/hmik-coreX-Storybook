@@ -1,14 +1,9 @@
 import React from "react";
 import "./Card.css";
-import { Button } from "../button/Button";
+import  Button  from "../button/Button";
+import Typography from '../typography/Typography';
 
-const Card = ({
-    image,
-    title,
-    description,
-    buttonText = "Button",
-    onClick,
-}) => {
+const Card = ({ image, title, description, buttonText = "Button", onClick, }) => {
     return (
         <div className="card">
 
@@ -20,9 +15,9 @@ const Card = ({
 
             <div className="card-body">
 
-                <h2>{title}</h2>
+                <Typography variant="heading3" className="gallery-card-title"> {title}</Typography>
 
-                <p>{description}</p>
+                <Typography>{description}</Typography>
 
                 <Button
                     variant="primary"
