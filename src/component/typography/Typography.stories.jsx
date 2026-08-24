@@ -1,7 +1,7 @@
 import Typography from "./Typography";
 
 export default {
-  title: "Atomic/Typography",
+  title: "Atomic/Typography/Typography",
   component: Typography,
   tags: ['autodocs'],
 
