@@ -1,0 +1,15 @@
+:root {
+    /* Brand Colors */
+    --color-primary: #4059AD;
+    --color-secondary: #F4B943;
+
+    /* State / Feedback Colors */
+    --color-success: #27AE60;
+    --color-error: #E74C3C;
+    --color-warning: #E67E22;
+    --color-info: #3498DB;
+
+    /* Neutral Colors */
+    --color-background: #F0F2F1;
+    --color-text: #2B2B2B;
+}
