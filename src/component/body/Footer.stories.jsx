@@ -1,7 +1,7 @@
 import { Footer } from './Footer';
 
 export default {
-    title: 'Component/Body/Footer',
+    title: 'Atomic/Body/Footer',
     component: Footer,
     tags: ['autodocs'],
     argTypes: {},
