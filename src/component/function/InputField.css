@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.input-field-wrapper {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-field {
+    width: 278px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #4059AD;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #4059AD;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.15s ease-in-out;
+}
+
+/* State: Default */
+.input-field--default {
+    border-color: #4059AD;
+    box-shadow: 2px 2px 0px #4059AD;
+}
+
+/* State: Hover */
+.input-field--default:hover,
+.input-field--hover {
+    border-color: #4059AD;
+    box-shadow: 2px 2px 0px #4059AD;
+    background-color: #F0F2F1;
+}
+
+/* State: Active / Focus */
+.input-field--default:focus,
+.input-field--active {
+    border-color: #4059AD;
+    box-shadow: 3px 3px 0px #4059AD;
+}
+
+/* State: Disabled */
+.input-field:disabled,
+.input-field--disabled {
+    background-color: #EAEAEA;
+    border-color: #CCCCCC;
+    color: #A0A0A0;
+    box-shadow: 2px 2px 0px #CCCCCC;
+    cursor: not-allowed;
+}
+
+/* State: Success */
+.input-field--success {
+    border-color: #27AE60;
+    box-shadow: 2px 2px 0px #27AE60;
+    color: #2B2B2B;
+}
+
+.input-field--success:focus {
+    box-shadow: 3px 3px 0px #27AE60;
+}
+
+/* State: Error */
+.input-field--error {
+    border-color: #EB5757;
+    box-shadow: 2px 2px 0px #EB5757;
+    color: #2B2B2B;
+}
+
+.input-field--error:focus {
+    box-shadow: 3px 3px 0px #EB5757;
+}
+
+/* State: Warning */
+.input-field--warning {
+    border-color: #E67E22;
+    box-shadow: 2px 2px 0px #E67E22;
+    color: #2B2B2B;
+}
+
+.input-field--warning:focus {
+    box-shadow: 3px 3px 0px #E67E22;
+}
+
+.input-field::placeholder {
+    color: #888888;
+}
+
+.input-field:disabled::placeholder {
+    color: #A0A0A0;
+}
