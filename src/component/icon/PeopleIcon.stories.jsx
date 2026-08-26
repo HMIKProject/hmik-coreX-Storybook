@@ -3,6 +3,7 @@ import Icon from "./PeopleIcon";
 export default {
   title: "Atomic/Icon/People",
   component: Icon,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

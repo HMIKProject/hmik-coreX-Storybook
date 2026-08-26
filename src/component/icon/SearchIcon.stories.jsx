@@ -3,6 +3,7 @@ import Icon from "./SearchIcon";
 export default {
   title: "Atomic/Icon/Search",
   component: Icon,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

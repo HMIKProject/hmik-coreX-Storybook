@@ -3,6 +3,7 @@ import Icon from "./CursorIcon";
 export default {
   title: "Atomic/Icon/Cursor",
   component: Icon,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

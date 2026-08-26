@@ -3,6 +3,7 @@ import LogoUP from "./LogoUP";
 export default {
   title: "Atomic/Icon/Logo UP",
   component: LogoUP,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

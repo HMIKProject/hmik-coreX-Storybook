@@ -3,6 +3,7 @@ import Icon from "./NoteIcon";
 export default {
   title: "Atomic/Icon/Note",
   component: Icon,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {

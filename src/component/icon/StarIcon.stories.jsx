@@ -3,6 +3,7 @@ import Icon from "./StarIcon";
 export default {
   title: "Atomic/Icon/Star",
   component: Icon,
+  tags: ['autodocs'],
 
   argTypes: {
     width: {
