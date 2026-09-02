@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import  Button  from "../button/Button";
+import  { Button }  from "../button/Button";
 import Typography from '../typography/Typography';
 
 const Card = ({ image, title, description, buttonText = "Button", onClick, }) => {
