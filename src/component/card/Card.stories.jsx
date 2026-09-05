@@ -16,3 +16,13 @@ export const Default = {
         buttonText: "Button",
     },
 };
+
+export const Profile = {
+    args: {
+        image: Image,
+        title: "Karina Siregar",
+        description: "",
+        buttonText: "Main Vocal",
+        variant: "card-profile",
+    },
+};

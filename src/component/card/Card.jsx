@@ -3,9 +3,9 @@ import "./Card.css";
 import  { Button }  from "../button/Button";
 import Typography from '../typography/Typography';
 
-const Card = ({ image, title, description, buttonText = "Button", onClick, }) => {
+const Card = ({ image, title, description, buttonText = "Button", onClick, variant = "default" }) => {
     return (
-        <div className="card">
+        <div className={`card ${variant !== 'default' ? variant : ''}`}>
 
             <img
                 src={image}
@@ -15,9 +15,9 @@ const Card = ({ image, title, description, buttonText = "Button", onClick, }) =>
 
             <div className="card-body">
 
-                <Typography variant="heading3" className="gallery-card-title"> {title}</Typography>
-
-                <Typography>{description}</Typography>
+                <Typography variant="heading3" className="gallery-card-title">{title}</Typography>
+                
+                {description && <Typography>{description}</Typography>}
 
                 <Button
                     variant="primary"
