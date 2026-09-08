@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 292px;
+    margin: 0 auto;
+    background-color: #4059AD;
+    border-top: 4px solid #F4B943;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.footer-logo-uper {
+    width: 106px;
+    height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+}
+
+.footer-logo-uper img,
+.footer-logo-uper svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-logo-hmik {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+}
+
+.footer-logo-hmik img,
+.footer-logo-hmik svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-brand-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+.footer-brand-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.footer-cards-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-card {
+    background-color: #F4B943;
+    border: 2.5px solid #2B2B2B;
+    box-shadow: 4px 4px 0px #2B2B2B;
+    border-radius: 20px;
+    padding: 24px;
+    color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 170px;
+}
+
+.footer-card-contact {
+    width: 290px;
+}
+
+.footer-card-address {
+    width: 310px;
+}
+
+.footer-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    color: #2B2B2B;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    color: #2B2B2B;
+    flex-shrink: 0;
+}
+
+.footer-contact-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2B2B2B;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-contact-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-address-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    color: #2B2B2B;
+}
