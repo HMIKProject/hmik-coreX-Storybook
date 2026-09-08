@@ -35,5 +35,4 @@ export { default as MoneyIcon } from './component/icon/MoneyIcon';
 export { default as Tape1Icon } from './component/icon/Tape1Icon';
 export { default as Tape2Icon } from './component/icon/Tape2Icon';
 export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
-export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
 export { default as LogoUPPutih } from './component/icon/LogoUPPutih';
