@@ -4,6 +4,7 @@ export { default as Card } from './component/card/Card';
 export { default as GalleryCard } from './component/card/GalleryCard';
 export { default as NewsCard } from './component/card/NewsCard';
 export { Navbar } from './component/body/Navbar';
+export { Footer } from './component/body/Footer';
 export { default as Typography } from './component/typography/Typography'
 
 // Export Icons
@@ -33,3 +34,6 @@ export { default as MedinfoIcon } from './component/icon/MedinfoIcon';
 export { default as MoneyIcon } from './component/icon/MoneyIcon';
 export { default as Tape1Icon } from './component/icon/Tape1Icon';
 export { default as Tape2Icon } from './component/icon/Tape2Icon';
+export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
+export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
+export { default as LogoUPPutih } from './component/icon/LogoUPPutih';
