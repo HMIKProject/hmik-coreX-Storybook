@@ -1,5 +1,5 @@
 import React from 'react';
-import { NewsCard } from './NewsCard';
+import NewsCard from './NewsCard';
 
 import Image from "../../assets/image.svg";
 

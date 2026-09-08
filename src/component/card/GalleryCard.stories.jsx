@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryCard } from './GalleryCard';
+import GalleryCard from './GalleryCard';
 
 import Image from "../../assets/image.svg";
 import ImageProf from "../../assets/profil.svg";
