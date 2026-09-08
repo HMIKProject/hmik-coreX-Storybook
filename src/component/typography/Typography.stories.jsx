@@ -1,4 +1,4 @@
-import Typography from "./Typography";
+import { Typography } from "./Typography";
 
 export default {
   title: "Atomic/Typography/Typography",
