@@ -6,7 +6,7 @@ import Typography from '../typography/Typography';
  * GalleryCard Component
  * Mendukung varian: 'default', 'avatar', dan 'overlay'
  */
-export const GalleryCard = ({ image, title, subtitle, variant = 'default' }) => {
+const GalleryCard = ({ image, title, subtitle, variant = 'default' }) => {
   // Class dinamis yang otomatis merender nama varian, contoh: 'gallery-card--overlay'
   const cardClassName = `gallery-card ${variant !== 'default' ? `gallery-card--${variant}` : ''}`;
 
@@ -31,3 +31,5 @@ export const GalleryCard = ({ image, title, subtitle, variant = 'default' }) => 
     </div>
   );
 };
+
+export default GalleryCard;

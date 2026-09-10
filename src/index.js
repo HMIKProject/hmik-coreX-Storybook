@@ -1,7 +1,11 @@
 // Export Components
 export { Button } from './component/button/Button';
 export { default as Card } from './component/card/Card';
+export { default as GalleryCard } from './component/card/GalleryCard';
+export { default as NewsCard } from './component/card/NewsCard';
 export { Navbar } from './component/body/Navbar';
+export { Footer } from './component/body/Footer';
+export { default as Typography } from './component/typography/Typography'
 
 // Export Icons
 export { default as CrownIcon } from './component/icon/CrownIcon';
@@ -14,3 +18,21 @@ export { default as RistekIcon } from './component/icon/RistekIcon';
 export { default as SearchIcon } from './component/icon/SearchIcon';
 export { default as StarIcon } from './component/icon/StarIcon';
 export { default as StructureIcon } from './component/icon/StructureIcon';
+export { default as WorkIcon } from './component/icon/WorkIcon';
+export { default as TrophyIcon } from './component/icon/TrophyIcon';
+export { default as IdeaIcon } from './component/icon/IdeaIcon';
+export { default as AstarIcon } from './component/icon/4starIcon';
+export { default as YellowStarIcon } from './component/icon/YellowStarIcon';
+export { default as AcademyupIcon } from './component/icon/AcademyupIcon';
+export { default as DepartemenIcon } from './component/icon/DepartemenIcon';
+export { default as EksternalIcon } from './component/icon/EksternalIcon';
+export { default as EmailIcon } from './component/icon/EmailIcon';
+export { default as GearIcon } from './component/icon/GearIcon';
+export { default as InstagramIcon } from './component/icon/InstagramIcon';
+export { default as InternalIcon } from './component/icon/InternalIcon';
+export { default as MedinfoIcon } from './component/icon/MedinfoIcon';
+export { default as MoneyIcon } from './component/icon/MoneyIcon';
+export { default as Tape1Icon } from './component/icon/Tape1Icon';
+export { default as Tape2Icon } from './component/icon/Tape2Icon';
+export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
+export { default as LogoUPPutih } from './component/icon/LogoUPPutih';

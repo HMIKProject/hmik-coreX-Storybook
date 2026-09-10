@@ -6,7 +6,7 @@ import Typography from '../typography/Typography';
  * NewsCard Component
  * Mendukung varian: 'default', dam 'profile'
  */
-export const NewsCard = ({ image, title, date, subtitle, variant = 'default' }) => {
+const NewsCard = ({ image, title, date, subtitle, variant = 'default' }) => {
   const cardClassName = `news-card ${variant === 'profile' ? 'news-card--profile' : ''}`;
 
   return (
@@ -34,3 +34,5 @@ export const NewsCard = ({ image, title, date, subtitle, variant = 'default' }) 
     </div>
   );
 };
+
+export default NewsCard;
