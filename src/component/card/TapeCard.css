@@ -1,0 +1,67 @@
+.tape-card {
+  position: relative;
+  border: 3px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0px #2B2B2B;
+  padding: 48px 32px 32px 32px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 500px;
+}
+
+.tape-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #2B2B2B;
+}
+
+/* Dekorasi Tape berada di tengah atas */
+.tape-card-decoration {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.tape-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.tape-card-title {
+  color: #2B2B2B;
+  margin: 0;
+  font-weight: 800;
+}
+
+.tape-card-body {
+  color: #2B2B2B;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Varian Warna */
+.tape-card--blue {
+  background-color: #DDE3F6; /* Biru sangat muda sesuai HighFi */
+}
+
+.tape-card--yellow {
+  background-color: #F8D37D; /* Kuning muda sesuai HighFi */
+}
+
+@media (max-width: 768px) {
+  .tape-card {
+    padding: 40px 24px 24px 24px;
+    border-radius: 16px;
+  }
+  
+  .tape-card-decoration svg {
+    width: 200px; /* Mengecilkan tape sedikit di mobile */
+    height: auto;
+  }
+}

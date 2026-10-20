@@ -1,0 +1,53 @@
+.text-card {
+  background-color: #F4B943;
+  border: 3px solid #2B2B2B;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 7px 7px 0px #2B2B2B;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0px #2B2B2B;
+}
+
+.text-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.text-card-header svg {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  color: #2B2B2B;
+}
+
+.text-card-title {
+  color: #2B2B2B;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.text-card-paragraph {
+  color: #2B2B2B;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .text-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
