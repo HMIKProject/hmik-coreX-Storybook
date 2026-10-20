@@ -9,12 +9,17 @@ export const Button = ({
     onClick,
     ...props
 }) => {
+    const combinedClassName = `custom-btn btn-${variant} ${props.className || ''}`.trim();
+    
+    // Hapus className dari props agar tidak bentrok
+    const { className, ...restProps } = props;
+
     return (
         <button
-            className={`custom-btn btn-${variant}`}
+            className={combinedClassName}
             disabled={disabled}
             onClick={onClick}
-            {...props}
+            {...restProps}
         >
             <span>{children}</span>
             {icon && (
