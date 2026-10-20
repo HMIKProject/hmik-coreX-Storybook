@@ -1,7 +1,7 @@
 import React from "react";
 import "./Typography.css";
 
-const Typography = ({
+export const Typography = ({
     variant = "body",
     children = "The quick brown fox jumps over the lazy dog",
     className = "",
