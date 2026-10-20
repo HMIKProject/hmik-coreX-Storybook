@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../assets/crowngold.svg";
 
-const CrownGoldIcon = ({
+export const CrownGoldIcon = ({
   width = 167,
   height = 167,
   alt = "Mahkota Emas HMIK",

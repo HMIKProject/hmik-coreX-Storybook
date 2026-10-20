@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../assets/VoteBoxIcon.svg";
 
-const VoteBoxIcon = ({
+export const VoteBoxIcon = ({
   width = 44,
   height = 44,
   alt = "Icon Kotak Suara",

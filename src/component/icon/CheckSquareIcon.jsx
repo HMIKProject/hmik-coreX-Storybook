@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../assets/CheckSquareIcon.svg";
 
-const CheckSquareIcon = ({
+export const CheckSquareIcon = ({
   width = 20,
   height = 20,
   alt = "Icon Check Square",
