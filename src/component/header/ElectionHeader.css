@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap');
+
+.election-header-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1342px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 48px 68px 68px 48px;
+}
+
+.election-header-card {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 4px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  min-height: 147px;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Mahkota Emas dari Figma */
+.election-header-crown {
+  position: absolute;
+  top: -73px;
+  left: -71px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.election-header-crown img {
+  display: block;
+}
+
+/* Teks Judul & Ikon Kotak Suara */
+.election-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+}
+
+.election-header-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #2B2B2B;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.election-header-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Badge Kuning "ILMU KOMPUTER" */
+.election-header-badge {
+  position: absolute;
+  bottom: -56px;
+  right: -56px;
+  background-color: #F4B943;
+  border: 4px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  width: 364px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.election-header-badge span {
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #2B2B2B;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* Responsivitas Layar Menengah (Laptop / Desktop Kecil) */
+@media (max-width: 1200px) {
+  .election-header-wrapper {
+    padding: 38px 40px 56px 40px;
+  }
+
+  .election-header-card {
+    min-height: 120px;
+    padding: 20px 36px;
+  }
+
+  .election-header-title {
+    font-size: 28px;
+  }
+
+  .election-header-content {
+    gap: 20px;
+  }
+
+  .election-header-icon {
+    width: 48px !important;
+    height: 42px !important;
+  }
+
+  .election-header-badge {
+    width: 290px;
+    height: 66px;
+    bottom: -44px;
+    right: -24px;
+  }
+
+  .election-header-badge span {
+    font-size: 20px;
+  }
+
+  .election-header-crown {
+    top: -60px;
+    left: -58px;
+  }
+
+  .election-header-crown img {
+    width: 135px !important;
+    height: 135px !important;
+  }
+}
+
+/* Responsivitas Tablet */
+@media (max-width: 900px) {
+  .election-header-wrapper {
+    padding: 32px 28px 48px 28px;
+  }
+
+  .election-header-card {
+    border-width: 3.5px;
+    padding: 18px 24px;
+  }
+
+  .election-header-title {
+    font-size: 22px;
+  }
+
+  .election-header-badge {
+    width: 230px;
+    height: 54px;
+    border-width: 3.5px;
+    border-radius: 16px;
+    bottom: -36px;
+    right: -10px;
+  }
+
+  .election-header-badge span {
+    font-size: 16px;
+  }
+
+  .election-header-crown {
+    top: -50px;
+    left: -48px;
+  }
+
+  .election-header-crown img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .election-header-icon {
+    width: 38px !important;
+    height: 33px !important;
+  }
+}
+
+/* Responsivitas Mobile */
+@media (max-width: 640px) {
+  .election-header-wrapper {
+    padding: 28px 16px 40px 16px;
+  }
+
+  .election-header-card {
+    border-width: 3px;
+    border-radius: 16px;
+    padding: 16px 14px;
+  }
+
+  .election-header-content {
+    gap: 12px;
+  }
+
+  .election-header-title {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .election-header-icon {
+    width: 28px !important;
+    height: 25px !important;
+  }
+
+  .election-header-badge {
+    width: auto;
+    height: auto;
+    padding: 6px 16px;
+    border-width: 2.5px;
+    border-radius: 12px;
+    bottom: -18px;
+    right: 8px;
+  }
+
+  .election-header-badge span {
+    font-size: 12px;
+  }
+
+  .election-header-crown {
+    top: -38px;
+    left: -34px;
+  }
+
+  .election-header-crown img {
+    width: 85px !important;
+    height: 85px !important;
+  }
+}
