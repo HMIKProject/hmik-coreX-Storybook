@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.candidate-card,
+.candidate-card * {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.candidate-card {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 3.5px solid #2B2B2B;
+  border-radius: 24px;
+  box-shadow: 5px 5px 0px #2B2B2B;
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.candidate-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #2B2B2B;
+}
+
+/* State Selected / Terpilih */
+.candidate-card.candidate-card-selected {
+  border-color: #4059AD;
+  box-shadow: 6px 6px 0px #4059AD;
+}
+
+/* Frame Foto Paslon */
+.candidate-card-image-wrapper {
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  border: 2.5px solid #2B2B2B;
+  overflow: hidden;
+  background-color: #E8ECF5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidate-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tag Nama Kabinet */
+.candidate-card-cabinet {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4059AD;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0;
+}
+
+/* Bagian Nama Kandidat & Peran */
+.candidate-card-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.candidate-card-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.candidate-card-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2B2B2B;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.candidate-card-role {
+  font-size: 12px;
+  font-weight: 500;
+  color: #555555;
+  margin: 0;
+  text-align: center;
+}
+
+.candidate-card-ampersand {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2B2B2B;
+  margin: 2px 0;
+  line-height: 1;
+}
+
+/* Section Visi */
+.candidate-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.candidate-card-section-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2B2B2B;
+  margin: 0;
+}
+
+.candidate-card-vision-text {
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #2B2B2B;
+  margin: 0;
+}
+
+/* Section Misi */
+.candidate-card-missions-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #2B2B2B;
+}
+
+.candidate-card-missions-list li {
+  margin-bottom: 3px;
+}
+
+.candidate-card-missions-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Tombol Aksi */
+.candidate-card-action {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.candidate-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #4059AD;
+  border: 2.5px solid #2B2B2B;
+  box-shadow: 3px 3px 0px #2B2B2B;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.candidate-card-btn:hover {
+  filter: brightness(1.08);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2B2B2B;
+}
+
+.candidate-card-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #2B2B2B;
+}
+
+/* Tombol ketika dalam kondisi terpilih (Selected) */
+.candidate-card-btn.candidate-card-btn-selected {
+  background-color: #F4B943;
+  color: #2B2B2B;
+  box-shadow: 3px 3px 0px #2B2B2B;
+}
+
+.candidate-card-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsivitas Mobile */
+@media (max-width: 480px) {
+  .candidate-card {
+    padding: 18px;
+    border-radius: 18px;
+    border-width: 3px;
+    gap: 14px;
+  }
+
+  .candidate-card-image-wrapper {
+    height: 200px;
+  }
+
+  .candidate-card-name {
+    font-size: 19px;
+  }
+
+  .candidate-card-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

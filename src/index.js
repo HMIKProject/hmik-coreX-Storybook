@@ -14,6 +14,8 @@ export { default as CarouselCard } from './component/card/CarouselCard';
 export { default as ElectionHeader } from './component/header/ElectionHeader';
 export { default as LoginCard } from './component/card/LoginCard';
 export { default as InputField } from './component/input/InputField';
+export { default as CandidateCard } from './component/card/CandidateCard';
+export { default as InstructionBanner } from './component/banner/InstructionBanner';
 
 // Export Icons
 export { default as CrownIcon } from './component/icon/CrownIcon';
