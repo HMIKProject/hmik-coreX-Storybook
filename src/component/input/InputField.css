@@ -1,0 +1,65 @@
+/* Base Style Input Field */
+.input-field {
+    display: flex;
+    width: 278px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #2B2B2B;
+    background-color: #F8F9FA;
+    border: 2px solid #4059AD;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 #4059AD;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+}
+
+/* Hover State */
+.input-field:hover,
+.input-field.input-hover {
+    background-color: #EFEFEF;
+    border-color: #4059AD;
+    box-shadow: 3px 3px 0 #4059AD;
+}
+
+/* Active / Focus State */
+.input-field:focus,
+.input-field.input-active {
+    background-color: #FFFFFF;
+    border-color: #4059AD;
+    box-shadow: 4px 4px 0 #4059AD;
+    transform: translate(-1px, -1px);
+}
+
+/* Disabled State */
+.input-field:disabled,
+.input-field.input-disabled {
+    background-color: #ECECEC;
+    border-color: #D1D5DB;
+    color: #A0AEC0;
+    box-shadow: 3px 3px 0 #CBD5E0;
+    cursor: not-allowed;
+}
+
+/* Success State */
+.input-field.input-success {
+    border-color: #27AE60;
+    box-shadow: 3px 3px 0 #27AE60;
+}
+
+/* Error State */
+.input-field.input-error {
+    border-color: #E74C3C;
+    box-shadow: 3px 3px 0 #E74C3C;
+}
+
+/* Warning State */
+.input-field.input-warning {
+    border-color: #E67E22;
+    box-shadow: 3px 3px 0 #E67E22;
+}
