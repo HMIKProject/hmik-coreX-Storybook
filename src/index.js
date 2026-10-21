@@ -3,9 +3,19 @@ export { Button } from './component/button/Button';
 export { default as Card } from './component/card/Card';
 export { default as GalleryCard } from './component/card/GalleryCard';
 export { default as NewsCard } from './component/card/NewsCard';
+export { default as TextCard } from './component/card/TextCard';
 export { Navbar } from './component/body/Navbar';
 export { Footer } from './component/body/Footer';
-export { default as Typography } from './component/typography/Typography'
+export { default as AboutGraphic } from './component/body/AboutGraphic';
+export { default as Typography } from './component/typography/Typography';
+export { default as OrgChartNode } from './component/card/OrgChartNode';
+export { default as PengurusCard } from './component/card/PengurusCard';
+export { default as CarouselCard } from './component/card/CarouselCard';
+export { default as ElectionHeader } from './component/header/ElectionHeader';
+export { default as LoginCard } from './component/card/LoginCard';
+export { default as InputField } from './component/input/InputField';
+export { default as CandidateCard } from './component/card/CandidateCard';
+export { default as InstructionBanner } from './component/banner/InstructionBanner';
 
 // Export Icons
 export { default as CrownIcon } from './component/icon/CrownIcon';
@@ -23,6 +33,7 @@ export { default as TrophyIcon } from './component/icon/TrophyIcon';
 export { default as IdeaIcon } from './component/icon/IdeaIcon';
 export { default as AstarIcon } from './component/icon/4starIcon';
 export { default as YellowStarIcon } from './component/icon/YellowStarIcon';
+export { default as ArrowUpRightIcon } from './component/icon/ArrowUpRightIcon';
 export { default as AcademyupIcon } from './component/icon/AcademyupIcon';
 export { default as DepartemenIcon } from './component/icon/DepartemenIcon';
 export { default as EksternalIcon } from './component/icon/EksternalIcon';
@@ -36,3 +47,14 @@ export { default as Tape1Icon } from './component/icon/Tape1Icon';
 export { default as Tape2Icon } from './component/icon/Tape2Icon';
 export { default as LogoHmikPutih } from './component/icon/LogoHmikPutih';
 export { default as LogoUPPutih } from './component/icon/LogoUPPutih';
+export { default as LogoHmikKotak } from './component/icon/LogoHmikKotak';
+export { default as LogoHmikLingkaran } from './component/icon/LogoHmikLingkaran';
+export { default as TapeCard } from './component/card/TapeCard';
+export { default as AboutusTitleIcon } from './component/icon/AboutusTitleIcon';
+export { default as ChevronLeftIcon } from './component/icon/ChevronLeftIcon';
+export { default as ChevronDownIcon } from './component/icon/ChevronDownIcon';
+export { default as VoteBoxIcon } from './component/icon/VoteBoxIcon';
+export { default as CheckSquareIcon } from './component/icon/CheckSquareIcon';
+export { default as CrownGoldIcon } from './component/icon/CrownGoldIcon';
+export { default as Eyeoff } from './component/icon/Eyeoff';
+

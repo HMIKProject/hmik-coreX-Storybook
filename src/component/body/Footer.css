@@ -2,9 +2,8 @@
 
 .footer-container {
     width: 100%;
-    max-width: 1440px;
+    /* max-width dihapus agar background biru membentang tak terbatas */
     height: 292px;
-    margin: 0 auto;
     background-color: #4059AD;
     border-top: 4px solid #F4B943;
     font-family: 'Inter', sans-serif;
@@ -15,6 +14,8 @@
 
 .footer-content {
     width: 100%;
+    max-width: 1440px; /* Batasan konten agar tidak terlalu melebar */
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-
+    flex-shrink: 0;
 }
 
 .footer-logo-uper {
@@ -70,14 +71,14 @@
 }
 
 .footer-brand-subtitle {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #FFFFFF;
     line-height: 24px;
 }
 
 .footer-brand-title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: #FFFFFF;
     line-height: 1.2;
@@ -155,4 +156,39 @@
     line-height: 1.5;
     margin: 0;
     color: #2B2B2B;
+}
+
+/* Responsivitas Footer - Banting ke Mobile */
+@media (max-width: 900px) {
+    .footer-container {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-cards-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-card-contact,
+    .footer-card-address {
+        width: 100%;
+    }
 }

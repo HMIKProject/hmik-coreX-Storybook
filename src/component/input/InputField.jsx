@@ -1,7 +1,11 @@
 import React from "react";
 import "./InputField.css";
 
+<<<<<<< HEAD
 const InputField = ({
+=======
+export const InputField = ({
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
   type = "text",
   placeholder,
   value,

@@ -1,0 +1,69 @@
+.org-chart-node {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transition: transform 0.2s;
+}
+
+.org-chart-node--clickable {
+  cursor: pointer;
+}
+
+.org-chart-node--clickable:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.org-chart-node-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.org-chart-node--rectangular {
+  width: 180px;
+  height: 150px;
+}
+
+.org-chart-node--circular {
+  width: 180px;
+  height: 175px;
+}
+
+.org-chart-node-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  margin-top: -6px; /* Slight offset due to drop shadows in SVG */
+}
+
+.org-chart-node-title {
+  font-size: 14px !important; /* Dibuat lebih besar karena card membesar */
+  font-weight: 600;
+  margin: 0;
+  max-width: 130px;
+  line-height: 1.2;
+}
+
+.org-chart-node--circular .org-chart-node-title {
+  color: #FFFFFF;
+}
+
+.org-chart-node--rectangular .org-chart-node-title {
+  color: #2B2B2B;
+}
+
+.org-chart-node-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,55 @@
+.about-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-graphic-circle {
+  width: 360px;
+  height: 360px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 3px solid #2B2B2B;
+  box-shadow: 6px 6px 0px #2B2B2B;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Membuat lingkaran proporsional meskipun layarnya mengecil */
+  flex-shrink: 0;
+}
+
+/* Penempatan Dekorasi */
+.about-star-blue {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+}
+
+.about-star-yellow {
+  position: absolute;
+  top: 60px;
+  right: -10px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .about-graphic-circle {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .about-graphic-circle img,
+  .about-graphic-circle svg {
+    width: 190px;
+    height: 190px;
+    max-width: 85%;
+    max-height: 85%;
+  }
+
+  .about-star-blue,
+  .about-star-yellow {
+    display: none !important;
+  }
+}

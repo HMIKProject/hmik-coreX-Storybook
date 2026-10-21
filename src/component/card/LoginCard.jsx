@@ -4,7 +4,11 @@ import { Button } from "../button/Button";
 import Eyeoff from "../icon/Eyeoff";
 import "./LoginCard.css";
 
+<<<<<<< HEAD
 const LoginCard = ({ title = "LOGIN", buttonText = "Sign In", onSubmit }) => {
+=======
+export const LoginCard = ({ title = "LOGIN", buttonText = "Sign In", onSubmit }) => {
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);

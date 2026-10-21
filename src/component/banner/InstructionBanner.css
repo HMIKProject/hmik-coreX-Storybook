@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+.instruction-banner-wrapper {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+
+.instruction-banner {
+  background-color: #F0F2F1;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 9999px;
+  box-shadow: 3px 3px 0px #2B2B2B;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.instruction-banner-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #2B2B2B;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsivitas Mobile */
+@media (max-width: 640px) {
+  .instruction-banner {
+    border-radius: 16px;
+    padding: 10px 18px;
+    border-width: 2px;
+  }
+
+  .instruction-banner-text {
+    font-size: 12px;
+  }
+}

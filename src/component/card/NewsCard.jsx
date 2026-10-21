@@ -6,8 +6,8 @@ import Typography from '../typography/Typography';
  * NewsCard Component
  * Mendukung varian: 'default', dam 'profile'
  */
-const NewsCard = ({ image, title, date, subtitle, variant = 'default' }) => {
-  const cardClassName = `news-card ${variant === 'profile' ? 'news-card--profile' : ''}`;
+const NewsCard = ({ image, title, date, subtitle, variant = 'default', onClick }) => {
+  const cardClassName = `news-card ${variant !== 'default' ? `news-card--${variant}` : ''}`;
 
   return (
     <div className={cardClassName}>
@@ -29,6 +29,12 @@ const NewsCard = ({ image, title, date, subtitle, variant = 'default' }) => {
             {date}
           </Typography>
         ) : null}
+
+        {variant === 'departemen' && (
+          <button className="news-card-btn-detail" onClick={onClick}>
+            Detail
+          </button>
+        )}
         
       </div>
     </div>

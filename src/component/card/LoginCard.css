@@ -6,20 +6,35 @@
     font-family: 'Inter', sans-serif;
 }
 
+<<<<<<< HEAD
 /* Ukuran Kontainer Login Card utama sesuai Figma */
+=======
+/* Ukuran Kontainer Login Card utama sesuai Figma (responsif Desktop-First) */
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
 .login-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 600px;
     height: 358px;
+=======
+    width: 100%;
+    max-width: 600px;
+    min-height: 358px;
+    height: auto;
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
     padding: 32px 48px;
     background: #FFFFFF;
     border: 4px solid #2B2B2B;
     border-radius: 20px;
     box-shadow: 4px 4px 0 #2B2B2B;
     box-sizing: border-box;
+<<<<<<< HEAD
+=======
+    gap: 20px;
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
 }
 
 .login-card-title {
@@ -54,7 +69,12 @@
 /* OVERRIDE KHUSUS INPUT FIELD DI DALAM LOGIN CARD */
 .login-card .input-field {
     display: flex;
+<<<<<<< HEAD
     width: 500px;
+=======
+    width: 100%;
+    max-width: 500px;
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
     padding: 10px 16px;
     justify-content: center;
     align-items: center;
@@ -105,4 +125,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
+=======
+}
+
+/* Responsivitas Mobile (Pilar 1 Standar Koding Frontend) */
+@media (max-width: 640px) {
+    .login-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+        border-width: 3px;
+        box-shadow: 3px 3px 0 #2B2B2B;
+        min-height: auto;
+    }
+
+    .login-card-title {
+        font-size: 22px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+    }
+
+    .login-card .input-field {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-width: 2.5px;
+        border-radius: 12px;
+    }
+
+    .password-input-wrapper .input-field {
+        padding-right: 40px;
+    }
+
+    .password-toggle-icon {
+        right: 12px;
+    }
+
+    .login-card .button-wrapper button {
+        width: 100%;
+        max-width: 220px;
+    }
+>>>>>>> 4380e3f37571573f8032b3a1a304491cae91d412
 }
