@@ -1,9 +1,12 @@
+import React from "react";
 import Icon from "../../assets/emailWhite.svg";
 
-const EmailWhiteIcon = ({
+export const EmailWhiteIcon = ({
   width = 70,
   height = 70,
   alt = "Icon Email Putih",
+  className = "",
+  ...props
 }) => {
   return (
     <img
@@ -11,6 +14,8 @@ const EmailWhiteIcon = ({
       width={width}
       height={height}
       alt={alt}
+      className={className}
+      {...props}
     />
   );
 };

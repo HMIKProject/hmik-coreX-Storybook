@@ -1,9 +1,12 @@
+import React from "react";
 import Icon from "../../assets/home.svg";
 
-const HomeIcon = ({
+export const HomeIcon = ({
   width = 70,
   height = 70,
   alt = "Icon Home",
+  className = "",
+  ...props
 }) => {
   return (
     <img
@@ -11,6 +14,8 @@ const HomeIcon = ({
       width={width}
       height={height}
       alt={alt}
+      className={className}
+      {...props}
     />
   );
 };

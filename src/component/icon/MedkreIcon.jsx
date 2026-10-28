@@ -1,9 +1,12 @@
+import React from "react";
 import Icon from "../../assets/medkre.svg";
 
-const Medkre = ({
+export const MedkreIcon = ({
   width = 70,
   height = 70,
   alt = "Icon Medkre",
+  className = "",
+  ...props
 }) => {
   return (
     <img
@@ -11,8 +14,10 @@ const Medkre = ({
       width={width}
       height={height}
       alt={alt}
+      className={className}
+      {...props}
     />
   );
 };
 
-export default Medkre;
+export default MedkreIcon;

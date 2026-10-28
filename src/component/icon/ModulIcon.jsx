@@ -1,9 +1,12 @@
+import React from "react";
 import Icon from "../../assets/modul.svg";
 
-const ModulIcon = ({
+export const ModulIcon = ({
   width = 70,
   height = 70,
   alt = "Icon Modul",
+  className = "",
+  ...props
 }) => {
   return (
     <img
@@ -11,6 +14,8 @@ const ModulIcon = ({
       width={width}
       height={height}
       alt={alt}
+      className={className}
+      {...props}
     />
   );
 };

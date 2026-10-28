@@ -57,4 +57,14 @@ export { default as VoteBoxIcon } from './component/icon/VoteBoxIcon';
 export { default as CheckSquareIcon } from './component/icon/CheckSquareIcon';
 export { default as CrownGoldIcon } from './component/icon/CrownGoldIcon';
 export { default as Eyeoff } from './component/icon/Eyeoff';
+export { default as AnggotaIcon } from './component/icon/AnggotaIcon';
+export { default as BoxTaskIcon } from './component/icon/BoxTaskIcon';
+export { default as CameraIcon } from './component/icon/CameraIcon';
+export { default as CancelIcon } from './component/icon/CancelIcon';
+export { default as DeleteIcon } from './component/icon/DeleteIcon';
+export { default as EmailWhiteIcon } from './component/icon/EmailWhiteIcon';
+export { default as HomeIcon } from './component/icon/HomeIcon';
+export { default as MedkreIcon } from './component/icon/MedkreIcon';
+export { default as ModulIcon } from './component/icon/ModulIcon';
+export { default as ResetIcon } from './component/icon/ResetIcon';
 
