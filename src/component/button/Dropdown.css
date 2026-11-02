@@ -1,0 +1,77 @@
+/* DropdownSemester.css */
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 220px;
+  font-family: sans-serif;
+}
+
+.dropdown-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 2px solid #1E1E1E;
+  background-color: #ffffff;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  box-shadow: 3px 3px 0 0 #FBBF24;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.dropdown-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 #FBBF24;
+}
+
+.dropdown-btn:focus {
+  outline: none;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  z-index: 50;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.5rem;
+  border: 2px solid #1E1E1E;
+  background-color: #ffffff;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  box-shadow: 3px 3px 0 0 #FBBF24;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.dropdown-item:focus {
+  outline: none;
+}
