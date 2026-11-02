@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap');
+
+/* Group Card Container */
+.vote-progress-group-card {
+  width: 100%;
+  max-width: 760px;
+  background-color: #FFFFFF;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vote-progress-group-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vote-progress-group-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  color: #2B2B2B;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.vote-progress-group-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.vote-progress-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Individual Progress Bar Item */
+.vote-progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.vote-progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.vote-progress-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2B2B2B;
+  margin: 0;
+}
+
+.vote-progress-votes {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* Progress Track */
+.vote-progress-track {
+  width: 100%;
+  height: 28px;
+  background-color: #F0F2F1;
+  border: 2px solid #2B2B2B;
+  border-radius: 9999px;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.vote-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.vote-progress-fill-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.vote-progress-outside-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2B2B2B;
+  margin-top: 2px;
+}
+
+/* Responsivitas Mobile (< 640px) */
+@media (max-width: 640px) {
+  .vote-progress-group-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    box-shadow: 3px 3px 0px #2B2B2B;
+    gap: 16px;
+  }
+
+  .vote-progress-group-title {
+    font-size: 17px;
+  }
+
+  .vote-progress-name {
+    font-size: 13.5px;
+  }
+
+  .vote-progress-votes {
+    font-size: 12px;
+  }
+
+  .vote-progress-track {
+    height: 24px;
+  }
+
+  .vote-progress-fill-text {
+    font-size: 11px;
+    padding-right: 8px;
+  }
+}

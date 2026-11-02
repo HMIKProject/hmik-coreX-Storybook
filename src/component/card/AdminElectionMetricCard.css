@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap');
+
+.admin-metric-card {
+  width: 100%;
+  max-width: 320px;
+  background-color: #FFFFFF;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 18px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.15s ease-in-out;
+}
+
+.admin-metric-card:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 5.5px 5.5px 0px #2B2B2B;
+}
+
+.admin-metric-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-metric-card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #555555;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.admin-metric-card-icon-badge {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #2B2B2B;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-metric-card-body {
+  display: flex;
+  align-items: baseline;
+}
+
+.admin-metric-card-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #2B2B2B;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.admin-metric-card-footer {
+  margin-top: auto;
+}
+
+.admin-metric-card-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Responsivitas Mobile (< 640px) */
+@media (max-width: 640px) {
+  .admin-metric-card {
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2B2B2B;
+    gap: 10px;
+  }
+
+  .admin-metric-card-value {
+    font-size: 28px;
+  }
+
+  .admin-metric-card-icon-badge {
+    width: 32px;
+    height: 32px;
+  }
+}
