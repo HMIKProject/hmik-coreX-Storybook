@@ -68,3 +68,16 @@ export { default as MedkreIcon } from './component/icon/MedkreIcon';
 export { default as ModulIcon } from './component/icon/ModulIcon';
 export { default as ResetIcon } from './component/icon/ResetIcon';
 
+// Export Fitur Voting Components
+export { default as OTPInputGroup } from './component/input/OTPInputGroup';
+export { default as VoteConfirmationModal } from './component/modal/VoteConfirmationModal';
+export { default as VoteSuccessCard } from './component/card/VoteSuccessCard';
+export { default as AdminElectionMetricCard } from './component/card/AdminElectionMetricCard';
+export { default as VoteProgressBar, VoteProgressBarGroup } from './component/chart/VoteProgressBar';
+export { default as VoteStatisticsCard } from './component/chart/VoteStatisticsCard';
+export { default as DeleteConfirmationModal } from './component/modal/DeleteConfirmationModal';
+
+// Export Fitur Voting Icons
+export { default as CheckRoundSuccessIcon } from './component/icon/CheckRoundSuccessIcon';
+export { default as UploadIcon } from './component/icon/UploadIcon';
+export { default as WarningAlertIcon } from './component/icon/WarningAlertIcon';
