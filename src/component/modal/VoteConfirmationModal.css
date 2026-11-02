@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap');
+
+.vote-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(43, 43, 43, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.vote-confirmation-modal {
+  width: 100%;
+  max-width: 540px;
+  background-color: #FFFFFF;
+  border: 3.5px solid #2B2B2B;
+  border-radius: 24px;
+  box-shadow: 6px 6px 0px #2B2B2B;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: voteModalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes voteModalPop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.vote-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+.vote-modal-badge {
+  background-color: #F7D070;
+  color: #2B2B2B;
+  border: 2px solid #2B2B2B;
+  border-radius: 9999px;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  padding: 4px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vote-modal-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #2B2B2B;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Candidate Box */
+.vote-modal-candidate-box {
+  background-color: #F0F2F1;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 16px;
+  box-shadow: 3.5px 3.5px 0px #2B2B2B;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vote-modal-candidate-number {
+  background-color: #4059AD;
+  color: #FFFFFF;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 12px;
+  box-shadow: 2.5px 2.5px 0px #2B2B2B;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.vote-modal-candidate-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vote-modal-cabinet {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4059AD;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.vote-modal-candidate-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #2B2B2B;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.vote-modal-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.vote-modal-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.vote-modal-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.vote-modal-btn-cancel {
+  background-color: #FFFFFF;
+  color: #2B2B2B;
+  border: 2.5px solid #2B2B2B;
+  box-shadow: 3.5px 3.5px 0px #2B2B2B;
+}
+
+.vote-modal-btn-cancel:hover {
+  background-color: #F8FAFC;
+  transform: translate(-1px, -1px);
+  box-shadow: 4.5px 4.5px 0px #2B2B2B;
+}
+
+.vote-modal-btn-cancel:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #2B2B2B;
+}
+
+.vote-modal-btn-confirm {
+  background-color: #27AE60;
+  color: #FFFFFF;
+  border: 2.5px solid #2B2B2B;
+  box-shadow: 3.5px 3.5px 0px #2B2B2B;
+}
+
+.vote-modal-btn-confirm:hover {
+  background-color: #219653;
+  transform: translate(-1px, -1px);
+  box-shadow: 4.5px 4.5px 0px #2B2B2B;
+}
+
+.vote-modal-btn-confirm:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #2B2B2B;
+}
+
+/* Responsivitas Mobile (< 640px) */
+@media (max-width: 640px) {
+  .vote-confirmation-modal {
+    padding: 22px 18px;
+    border-radius: 20px;
+    border-width: 3px;
+    box-shadow: 4.5px 4.5px 0px #2B2B2B;
+    gap: 16px;
+  }
+
+  .vote-modal-title {
+    font-size: 20px;
+  }
+
+  .vote-modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .vote-modal-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
