@@ -1,0 +1,69 @@
+.hmik-dashboard-metric-card {
+  border: 2.5px solid #2B2B2B;
+  box-shadow: 3px 3px 0px #1E1E1E;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hmik-dashboard-metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px #1E1E1E;
+}
+
+.hmik-dashboard-metric-card--blue {
+  background-color: #4059AD;
+}
+
+.hmik-dashboard-metric-card--yellow {
+  background-color: #F4B943;
+}
+
+.hmik-dashboard-metric-card--green {
+  background-color: #27AE60;
+}
+
+.hmik-dashboard-metric-card--orange {
+  background-color: #E67E22;
+}
+
+.hmik-dashboard-metric-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1.5px solid #2B2B2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hmik-dashboard-metric-content {
+  margin-top: 16px;
+}
+
+.hmik-dashboard-metric-value {
+  font-size: 44px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+  display: block;
+}
+
+.hmik-dashboard-metric-label {
+  margin: 8px 0 2px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.hmik-dashboard-metric-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.82);
+}

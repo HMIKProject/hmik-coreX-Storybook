@@ -81,3 +81,13 @@ export { default as DeleteConfirmationModal } from './component/modal/DeleteConf
 export { default as CheckRoundSuccessIcon } from './component/icon/CheckRoundSuccessIcon';
 export { default as UploadIcon } from './component/icon/UploadIcon';
 export { default as WarningAlertIcon } from './component/icon/WarningAlertIcon';
+
+// Export Fitur Admin CMS
+export { default as AdminSidebar } from './component/sidebar/AdminSidebar';
+export { default as AdminHeader } from './component/header/AdminHeader';
+export { default as AdminDashboardMetricCard } from './component/card/AdminDashboardMetricCard';
+export { default as AdminQuickActionCard } from './component/card/AdminQuickActionCard';
+export { default as AdminActivityItem } from './component/card/AdminActivityItem';
+export { default as AdminTable, AdminTableBadge } from './component/table/AdminTable';
+
+

@@ -1,0 +1,89 @@
+.hmik-admin-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 2px solid #2B2B2B;
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px 0px #2B2B2B;
+}
+
+.hmik-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+}
+
+.hmik-admin-table thead {
+  background-color: #F8F9FA;
+  border-bottom: 2px solid #2B2B2B;
+}
+
+.hmik-admin-table th {
+  padding: 14px 16px;
+  font-weight: 700;
+  color: #2B2B2B;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.hmik-admin-table td {
+  padding: 14px 16px;
+  color: #333333;
+  border-bottom: 1px solid #EEEEEE;
+  vertical-align: middle;
+}
+
+.hmik-admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hmik-admin-table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+.hmik-admin-table-empty,
+.hmik-admin-table-loading {
+  text-align: center;
+  padding: 36px 16px;
+  color: #777777;
+  font-size: 14px;
+}
+
+/* AdminTableBadge */
+.hmik-table-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  border: 1.5px solid transparent;
+}
+
+.hmik-table-badge--success {
+  background-color: #E8F8F0;
+  color: #1E7E46;
+  border-color: #27AE60;
+}
+
+.hmik-table-badge--warning {
+  background-color: #FEF8E7;
+  color: #B38600;
+  border-color: #F4B943;
+}
+
+.hmik-table-badge--danger {
+  background-color: #FEECEB;
+  color: #C0392B;
+  border-color: #E74C3C;
+}
+
+.hmik-table-badge--info {
+  background-color: #EBF3FF;
+  color: #2953B2;
+  border-color: #4059AD;
+}

@@ -1,0 +1,70 @@
+.hmik-quick-action-card {
+  background-color: #FFFFFF;
+  border: 2px solid #2B2B2B;
+  border-radius: 16px;
+  box-shadow: 3px 3px 0px #2B2B2B;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  user-select: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  width: 100%;
+}
+
+.hmik-quick-action-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #2B2B2B;
+}
+
+.hmik-quick-action-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #2B2B2B;
+}
+
+.hmik-quick-action-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hmik-quick-action-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1.5px solid #2B2B2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hmik-quick-action-title {
+  margin: 0;
+  fontSize: 14px;
+  font-weight: 800;
+  color: #2B2B2B;
+}
+
+.hmik-quick-action-sub {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #777777;
+}
+
+.hmik-quick-action-arrow {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2B2B2B;
+  margin-left: 8px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.hmik-quick-action-card:hover .hmik-quick-action-arrow {
+  transform: translateX(3px);
+}

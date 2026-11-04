@@ -1,0 +1,43 @@
+.hmik-admin-header {
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #F4B943;
+  padding: 16px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.hmik-admin-header-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4059AD;
+  letter-spacing: -0.2px;
+}
+
+.hmik-admin-header-subtitle {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.hmik-admin-header-badge {
+  background-color: #EAF0FF;
+  color: #4059AD;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1.5px solid #4059AD;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
