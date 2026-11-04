@@ -3,7 +3,7 @@ import './AdminHeader.css';
 export const AdminHeader = ({
   title = 'Dashboard Admin',
   subtitle = 'Himpunan Mahasiswa Ilmu Komputer',
-  badgeText = 'Online Mode',
+  badgeText = null,
   badgeIndicator = '🟢',
   className = '',
   rightContent,
@@ -17,11 +17,13 @@ export const AdminHeader = ({
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-        {rightContent || (
+        {rightContent ? (
+          rightContent
+        ) : badgeText ? (
           <span className="hmik-admin-header-badge">
             {badgeIndicator} {badgeText}
           </span>
-        )}
+        ) : null}
       </div>
     </header>
   );

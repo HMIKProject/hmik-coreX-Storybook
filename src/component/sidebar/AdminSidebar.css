@@ -58,6 +58,11 @@
   padding: 0 20px;
 }
 
+.hmik-admin-sidebar-nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .hmik-admin-sidebar-nav-item {
   display: flex;
   align-items: center;
@@ -105,6 +110,79 @@
 .hmik-admin-sidebar-nav-item--active .hmik-admin-sidebar-icon-box {
   background-color: #F4B943;
   border: 1.5px solid #2B2B2B;
+}
+
+/* Submenu Accordion per Figma #1833:5169 */
+.hmik-admin-submenu-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  padding-left: 20px;
+  animation: hmikSubmenuSlideDown 0.2s ease-out;
+}
+
+@keyframes hmikSubmenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hmik-admin-submenu-line {
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  bottom: 8px;
+  width: 2px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+
+.hmik-admin-submenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 24px;
+  width: 100%;
+}
+
+.hmik-admin-submenu-item {
+  width: 100%;
+  max-width: 202px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #4059AD;
+  border: 1px solid #F0F2F1;
+  box-shadow: 1px 1px 0px 0px rgba(240, 242, 241, 1);
+  color: #F0F2F1;
+  transition: all 0.12s ease-in-out;
+  user-select: none;
+}
+
+.hmik-admin-submenu-item:hover {
+  transform: translate(-1px, -1px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hmik-admin-submenu-item--active {
+  background-color: #F0F2F1 !important;
+  border: 1px solid #000000 !important;
+  box-shadow: 2px 2px 0px 0px #F4B943 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  transform: translate(-1px, -1px);
 }
 
 .hmik-admin-sidebar-footer {

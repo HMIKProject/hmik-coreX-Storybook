@@ -1,70 +1,70 @@
-import VoteBoxIcon from "../icon/VoteBoxIcon";
-import PeopleIcon from "../icon/PeopleIcon";
-import TrophyIcon from "../icon/TrophyIcon";
-import CheckSquareIcon from "../icon/CheckSquareIcon";
-import "./AdminElectionMetricCard.css";
+import VoteBoxIcon from '../icon/VoteBoxIcon';
+import PeopleIcon from '../icon/PeopleIcon';
+import TrophyIcon from '../icon/TrophyIcon';
+import CheckSquareIcon from '../icon/CheckSquareIcon';
+import './AdminElectionMetricCard.css';
 
 const VARIANT_CONFIGS = {
-  "suara-masuk": {
-    badgeColor: "#F7D070",
-    icon: (props) => <VoteBoxIcon {...props} />,
-    defaultLabel: "SUARA MASUK",
-    defaultSub: "Total suara yang telah diverifikasi",
-  },
-  "pemilih-terdaftar": {
-    badgeColor: "#9CB3FF",
+  'suara-masuk': {
+    className: 'admin-metric-card--suara-masuk',
+    bgColor: '#4059AD',
+    badgeBg: '#F4B943',
+    iconColor: '#2B2B2B',
     icon: (props) => <PeopleIcon {...props} />,
-    defaultLabel: "PEMILIH TERDAFTAR",
-    defaultSub: "Total mahasiswa dalam DPT",
+    defaultLabel: 'SUARA MASUK',
   },
-  "partisipasi": {
-    badgeColor: "#27AE60",
+  'pemilih-terdaftar': {
+    className: 'admin-metric-card--pemilih-terdaftar',
+    bgColor: '#F4B943',
+    badgeBg: '#4059AD',
+    iconColor: '#FFFFFF',
     icon: (props) => <CheckSquareIcon {...props} />,
-    defaultLabel: "PARTISIPASI",
-    defaultSub: "Persentase kehadiran pemilih",
+    defaultLabel: 'PEMILIH TERDAFTAR',
   },
-  "kandidat": {
-    badgeColor: "#E67E22",
+  'partisipasi': {
+    className: 'admin-metric-card--partisipasi',
+    bgColor: '#27AE60',
+    badgeBg: '#F4B943',
+    iconColor: '#2B2B2B',
     icon: (props) => <TrophyIcon {...props} />,
-    defaultLabel: "KANDIDAT",
-    defaultSub: "Pasangan calon terverifikasi",
+    defaultLabel: 'PARTISIPASI',
+  },
+  'kandidat': {
+    className: 'admin-metric-card--kandidat',
+    bgColor: '#E67E22',
+    badgeBg: '#4059AD',
+    iconColor: '#FFFFFF',
+    icon: (props) => <VoteBoxIcon {...props} />,
+    defaultLabel: 'KANDIDAT',
   },
 };
 
 export const AdminElectionMetricCard = ({
-  variant = "suara-masuk",
-  value = "327",
+  variant = 'suara-masuk',
+  value = '327',
   label,
-  subtitle,
   customIcon,
-  className = "",
+  className = '',
   ...props
 }) => {
-  const config = VARIANT_CONFIGS[variant] || VARIANT_CONFIGS["suara-masuk"];
+  const config = VARIANT_CONFIGS[variant] || VARIANT_CONFIGS['suara-masuk'];
   const displayLabel = label || config.defaultLabel;
-  const displaySub = subtitle || config.defaultSub;
 
   return (
     <div
-      className={`admin-metric-card admin-metric-card--${variant} ${className}`.trim()}
+      className={`admin-metric-card ${config.className} ${className}`.trim()}
       {...props}
     >
-      <div className="admin-metric-card-top">
-        <span className="admin-metric-card-label">{displayLabel}</span>
-        <div
-          className="admin-metric-card-icon-badge"
-          style={{ backgroundColor: config.badgeColor }}
-        >
-          {customIcon || config.icon({ width: 20, height: 20, alt: displayLabel })}
-        </div>
+      <div
+        className="admin-metric-card-icon-badge"
+        style={{ backgroundColor: config.badgeBg }}
+      >
+        {customIcon || config.icon({ width: 22, height: 22, color: config.iconColor })}
       </div>
 
-      <div className="admin-metric-card-body">
+      <div className="admin-metric-card-content">
         <span className="admin-metric-card-value">{value}</span>
-      </div>
-
-      <div className="admin-metric-card-footer">
-        <p className="admin-metric-card-subtitle">{displaySub}</p>
+        <p className="admin-metric-card-label">{displayLabel}</p>
       </div>
     </div>
   );

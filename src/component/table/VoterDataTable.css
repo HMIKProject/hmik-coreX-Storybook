@@ -1,0 +1,116 @@
+.hmik-voter-table-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 3px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hmik-voter-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 13px;
+}
+
+.hmik-voter-table-header {
+  background-color: #3F57B3;
+}
+
+.hmik-voter-table-header th {
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hmik-voter-table-header th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.hmik-voter-table-header th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.hmik-voter-table tbody tr {
+  border-bottom: 2px solid #5A5A5A;
+}
+
+.hmik-voter-table tbody td {
+  padding: 16px;
+  color: #2B2B2B;
+  border-bottom: 2px solid #5A5A5A;
+  vertical-align: middle;
+}
+
+.hmik-voter-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hmik-voter-table-nim {
+  color: #3F57B3;
+  font-weight: 800;
+}
+
+/* Badge Status Vote */
+.hmik-voter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  border: 1.5px solid #2B2B2B;
+  white-space: nowrap;
+}
+
+.hmik-voter-badge--voted {
+  background-color: #27AE60;
+  color: #FFFFFF;
+}
+
+.hmik-voter-badge--not-voted {
+  background-color: #F4B943;
+  color: #2B2B2B;
+}
+
+/* Button Hapus Aksi */
+.hmik-voter-delete-btn {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+  border: 1.5px solid #2B2B2B;
+  border-radius: 14px;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  padding: 4px 16px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.hmik-voter-delete-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #2B2B2B;
+}
+
+.hmik-voter-delete-btn:active {
+  transform: scale(0.96);
+}
+
+.hmik-voter-empty {
+  text-align: center;
+  padding: 36px 16px;
+  color: #777777;
+  font-size: 14px;
+}

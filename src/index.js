@@ -89,5 +89,8 @@ export { default as AdminDashboardMetricCard } from './component/card/AdminDashb
 export { default as AdminQuickActionCard } from './component/card/AdminQuickActionCard';
 export { default as AdminActivityItem } from './component/card/AdminActivityItem';
 export { default as AdminTable, AdminTableBadge } from './component/table/AdminTable';
+export { default as VoteCandidateResultCard } from './component/chart/VoteCandidateResultCard';
+export { default as VoterDataTable } from './component/table/VoterDataTable';
+
 
 
