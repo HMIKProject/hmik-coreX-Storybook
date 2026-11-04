@@ -65,7 +65,7 @@ export const AdminTable = ({
                       key={col.key || col.label}
                       style={{ textAlign: col.align || 'left' }}
                     >
-                      {col.render ? col.render(cellValue, row) : cellValue}
+                      {col.render ? col.render(cellValue, row, rowIndex) : cellValue}
                     </td>
                   );
                 })}
