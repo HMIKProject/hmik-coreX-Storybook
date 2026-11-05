@@ -114,3 +114,72 @@
   color: #777777;
   font-size: 14px;
 }
+
+/* Pagination Bar Neobrutalisme */
+.hmik-voter-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid #E0E0E0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hmik-voter-pagination-info {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4A4A4A;
+}
+
+.hmik-voter-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hmik-voter-page-btn {
+  background-color: #FFFFFF;
+  color: #2B2B2B;
+  border: 2px solid #2B2B2B;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.hmik-voter-page-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #2B2B2B;
+  background-color: #F0F4FF;
+}
+
+.hmik-voter-page-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2B2B2B;
+}
+
+.hmik-voter-page-btn--active {
+  background-color: #3F57B3;
+  color: #FFFFFF;
+}
+
+.hmik-voter-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  background-color: #F5F5F5;
+  border-color: #AAAAAA;
+  color: #888888;
+}
+
+.hmik-voter-page-ellipsis {
+  padding: 0 4px;
+  font-weight: 800;
+  color: #777777;
+}
+

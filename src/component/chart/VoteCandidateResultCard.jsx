@@ -2,14 +2,14 @@ import './VoteCandidateResultCard.css';
 
 export const VoteCandidateResultCard = ({
   title = 'Hasil Perolehan Suara per Kandidat',
-  totalVotes = 327,
+  totalVotes = 0,
   subtitle,
   candidates = [],
   className = '',
   ...props
 }) => {
   const displaySubtitle =
-    subtitle || `Total suara yang terlah diverifikasi: ${totalVotes}`;
+    subtitle || `Total suara yang telah diverifikasi: ${totalVotes}`;
 
   return (
     <div className={`hmik-vote-result-card ${className}`.trim()} {...props}>
