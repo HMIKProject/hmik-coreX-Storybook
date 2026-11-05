@@ -91,6 +91,5 @@ export { default as AdminActivityItem } from './component/card/AdminActivityItem
 export { default as AdminTable, AdminTableBadge } from './component/table/AdminTable';
 export { default as VoteCandidateResultCard } from './component/chart/VoteCandidateResultCard';
 export { default as VoterDataTable } from './component/table/VoterDataTable';
-
-
-
+export { default as CandidateAdminTable } from './component/table/CandidateAdminTable';
+export { default as CandidateFormModal } from './component/modal/CandidateFormModal';
