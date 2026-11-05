@@ -166,129 +166,24 @@ export const ElectionSettingsForm = ({
           </select>
         </div>
 
-        {/* Row 4: Upload Logo Branding (Sesuai Figma #1830:576) */}
-        <div className="hmik-election-settings-section">
-          <span className="hmik-election-settings-label">
-            Branding & Logo Halaman Masuk Pemilih
+        {/* Notice Info: Khusus HMIK */}
+        <div className="hmik-election-settings-hmik-notice" style={{
+          padding: '16px',
+          borderRadius: '12px',
+          backgroundColor: '#eff6ff',
+          border: '1px solid #bfdbfe',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '6px'
+        }}>
+          <span style={{ fontWeight: 700, color: '#1e40af', fontSize: '14px' }}>
+            ℹ️ Konfigurasi Khusus HMIK
           </span>
-
-          <div className="hmik-election-logos-grid">
-            {/* Slot 1: Logo Tengah */}
-            <div className="hmik-election-logo-slot">
-              <span className="hmik-election-logo-label">
-                Logo Halaman Login (Tengah)
-              </span>
-              <input
-                ref={fileInputRef1}
-                type="file"
-                accept="image/*"
-                style={{ display: 'none' }}
-                onChange={(e) => handleFileChange('logo_tengah', e)}
-              />
-              <div
-                className="hmik-election-logo-dropzone"
-                onClick={() => fileInputRef1.current?.click()}
-              >
-                {formData.logo_tengah ? (
-                  <div className="hmik-election-logo-preview">
-                    <img
-                      src={formData.logo_tengah}
-                      alt="Logo Tengah"
-                      className="hmik-election-logo-img"
-                    />
-                    <span className="hmik-election-logo-change-tag">Ganti</span>
-                  </div>
-                ) : (
-                  <>
-                    <UploadIcon width={28} height={28} alt="Unggah Logo" />
-                    <span className="hmik-election-logo-placeholder-text">
-                      Unggah Logo
-                    </span>
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Slot 2: Logo Header Kiri 1 */}
-            <div className="hmik-election-logo-slot">
-              <span className="hmik-election-logo-label">
-                Logo Header Kiri 1
-              </span>
-              <input
-                ref={fileInputRef2}
-                type="file"
-                accept="image/*"
-                style={{ display: 'none' }}
-                onChange={(e) => handleFileChange('logo_kiri_1', e)}
-              />
-              <div
-                className="hmik-election-logo-dropzone"
-                onClick={() => fileInputRef2.current?.click()}
-              >
-                {formData.logo_kiri_1 ? (
-                  <div className="hmik-election-logo-preview">
-                    <img
-                      src={formData.logo_kiri_1}
-                      alt="Logo Header Kiri 1"
-                      className="hmik-election-logo-img"
-                    />
-                    <span className="hmik-election-logo-change-tag">Ganti</span>
-                  </div>
-                ) : (
-                  <>
-                    <UploadIcon width={28} height={28} alt="Unggah Logo" />
-                    <span className="hmik-election-logo-placeholder-text">
-                      Unggah Logo
-                    </span>
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Slot 3: Logo Header Kiri 2 */}
-            <div className="hmik-election-logo-slot">
-              <span className="hmik-election-logo-label">
-                Logo Header Kiri 2
-              </span>
-              <input
-                ref={fileInputRef3}
-                type="file"
-                accept="image/*"
-                style={{ display: 'none' }}
-                onChange={(e) => handleFileChange('logo_kiri_2', e)}
-              />
-              <div
-                className="hmik-election-logo-dropzone"
-                onClick={() => fileInputRef3.current?.click()}
-              >
-                {formData.logo_kiri_2 ? (
-                  <div className="hmik-election-logo-preview">
-                    <img
-                      src={formData.logo_kiri_2}
-                      alt="Logo Header Kiri 2"
-                      className="hmik-election-logo-img"
-                    />
-                    <span className="hmik-election-logo-change-tag">Ganti</span>
-                  </div>
-                ) : (
-                  <>
-                    <UploadIcon width={28} height={28} alt="Unggah Logo" />
-                    <span className="hmik-election-logo-placeholder-text">
-                      Unggah Logo
-                    </span>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
+          <p style={{ margin: 0, fontSize: '13px', color: '#3b82f6', lineHeight: 1.5 }}>
+            Sistem pemilihan raya ini dikhususkan secara eksklusif untuk Himpunan Mahasiswa Ilmu Komputer (HMIK).
+            Identitas logo dan aset branding portal pemilih terikat secara otomatis dengan aset resmi himpunan.
+          </p>
         </div>
-
-        {/* Hint text per Figma #1830:627 */}
-        <p className="hmik-election-settings-hint">
-          Unggah gambar baru akan otomatis memicu penyimpanan URL dan
-          menggantikan gambar lama (jika ada) di storage. Kosongkan untuk
-          menghapus logo.
-        </p>
 
         {/* Footer Actions */}
         <div className="hmik-election-settings-actions">

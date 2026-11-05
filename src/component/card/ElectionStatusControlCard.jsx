@@ -139,15 +139,19 @@ export const ElectionStatusControlCard = ({
               type="button"
               className="hmik-election-btn-control hmik-election-btn-control--export"
               onClick={onExportToHimpunan}
-              disabled={isLoading || mpikStatus !== 'APPROVED'}
+              disabled={isLoading || mpikStatus === 'APPROVED'}
               title={
-                mpikStatus !== 'APPROVED'
-                  ? 'Menunggu pengesahan resmi dari MPIK sebelum data diekspor'
-                  : 'Ekspor paslon terpilih ke Manajemen Himpunan'
+                mpikStatus === 'APPROVED'
+                  ? 'Kabinet baru telah berhasil dilantik dan aktif di Manajemen Himpunan'
+                  : 'Sahkan hasil pemenang pemira dan lantik Kabinet baru ke Manajemen Himpunan'
               }
             >
               <span>🏛️</span>
-              <span>Ekspor ke Manajemen Himpunan</span>
+              <span>
+                {mpikStatus === 'APPROVED'
+                  ? '✓ Kabinet Baru Telah Dilantik'
+                  : 'Sahkan & Lantik Kabinet Baru (MPIK)'}
+              </span>
             </button>
           </>
         )}
