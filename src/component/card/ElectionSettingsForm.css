@@ -1,0 +1,205 @@
+.hmik-election-settings-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 3px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #2B2B2B;
+  padding: 28px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2B2B2B;
+}
+
+.hmik-election-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Section Group */
+.hmik-election-settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hmik-election-settings-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2B2B2B;
+  letter-spacing: -0.01em;
+}
+
+.hmik-election-settings-input,
+.hmik-election-settings-select {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 2px solid #2B2B2B;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #2B2B2B;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hmik-election-settings-input:focus,
+.hmik-election-settings-select:focus {
+  border-color: #3F57B3;
+  box-shadow: 3px 3px 0px #3F57B3;
+}
+
+.hmik-election-settings-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .hmik-election-settings-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Logos Upload Grid */
+.hmik-election-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .hmik-election-logos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hmik-election-logo-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hmik-election-logo-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2B2B2B;
+}
+
+.hmik-election-logo-dropzone {
+  min-height: 120px;
+  background-color: #F8F9FA;
+  border: 2px dashed #2B2B2B;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.hmik-election-logo-dropzone:hover {
+  background-color: #EEF2FF;
+  border-color: #3F57B3;
+}
+
+.hmik-election-logo-preview {
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  border: 2px solid #2B2B2B;
+  box-shadow: 2px 2px 0px #2B2B2B;
+  background-color: #3F57B3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hmik-election-logo-img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.hmik-election-logo-change-tag {
+  position: absolute;
+  bottom: 4px;
+  background-color: rgba(43, 43, 43, 0.85);
+  color: #FFFFFF;
+  border-radius: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+}
+
+.hmik-election-logo-placeholder-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6B7280;
+}
+
+/* Hint footer text */
+.hmik-election-settings-hint {
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Footer Submit */
+.hmik-election-settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+  border-top: 2px solid #E5E7EB;
+}
+
+.hmik-election-btn-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #3F57B3;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  border: 2.5px solid #2B2B2B;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0px #2B2B2B;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  user-select: none;
+}
+
+.hmik-election-btn-save:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2B2B2B;
+  background-color: #354a99;
+}
+
+.hmik-election-btn-save:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2B2B2B;
+}
+
+.hmik-election-btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 2px 2px 0px #2B2B2B;
+}

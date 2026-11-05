@@ -93,3 +93,5 @@ export { default as VoteCandidateResultCard } from './component/chart/VoteCandid
 export { default as VoterDataTable } from './component/table/VoterDataTable';
 export { default as CandidateAdminTable } from './component/table/CandidateAdminTable';
 export { default as CandidateFormModal } from './component/modal/CandidateFormModal';
+export { default as ElectionStatusControlCard } from './component/card/ElectionStatusControlCard';
+export { default as ElectionSettingsForm } from './component/card/ElectionSettingsForm';
