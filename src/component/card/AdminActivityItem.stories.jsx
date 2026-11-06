@@ -1,5 +1,7 @@
 import AdminActivityItem from './AdminActivityItem';
-import { ModulIcon, UploadIcon, CheckRoundSuccessIcon } from '../icon';
+import ModulIcon from '../icon/ModulIcon';
+import UploadIcon from '../icon/UploadIcon';
+import CheckRoundSuccessIcon from '../icon/CheckRoundSuccessIcon';
 
 export default {
   title: 'Components/Card/AdminActivityItem',
