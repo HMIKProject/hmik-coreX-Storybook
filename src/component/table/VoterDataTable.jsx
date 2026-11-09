@@ -67,8 +67,9 @@ export const VoterDataTable = ({
                         type="button"
                         className="hmik-voter-delete-btn"
                         onClick={() => onDelete(voter)}
+                        title="Reset hak suara pemilih menjadi belum memilih"
                       >
-                        Hapus
+                        Reset Status
                       </button>
                     ) : (
                       <span>-</span>
