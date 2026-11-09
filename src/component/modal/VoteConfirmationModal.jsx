@@ -6,6 +6,7 @@ export const VoteConfirmationModal = ({
   isOpen = true,
   onClose,
   onConfirm,
+  isLoading = false,
   candidateNumber = "01",
   candidateName = "Loid Forger & Nanami Kento",
   cabinetName = "KABINET ANJIR",
@@ -68,9 +69,14 @@ export const VoteConfirmationModal = ({
             type="button"
             className="vote-modal-btn vote-modal-btn-confirm"
             onClick={onConfirm}
+            disabled={isLoading}
+            style={{
+              opacity: isLoading ? 0.65 : 1,
+              cursor: isLoading ? 'not-allowed' : 'pointer'
+            }}
           >
             <CheckSquareIcon width={20} height={20} alt="Konfirmasi" />
-            <span>{confirmText}</span>
+            <span>{isLoading ? 'Menyimpan...' : confirmText}</span>
           </button>
         </div>
       </div>

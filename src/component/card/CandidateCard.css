@@ -208,7 +208,8 @@
   }
 
   .candidate-card-image-wrapper {
-    height: 200px;
+    aspect-ratio: 1 / 1;
+    max-height: 320px;
   }
 
   .candidate-card-name {
