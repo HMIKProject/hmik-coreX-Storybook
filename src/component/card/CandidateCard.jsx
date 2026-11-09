@@ -9,6 +9,7 @@ export const CandidateCard = ({
   viceLeaderName = "Nanami Kento",
   viceLeaderRole = "Calon Wakil Ketua",
   imageSrc,
+  imageFit = "contain",
   vision = "Menyejahterakan seluruh makhluk di negeri dan mendorong perkembangan teknologi",
   missions = [
     "Menebang semua pohon sawit yg ga berguna untuk diganti dengan reboisasi",
@@ -41,6 +42,7 @@ export const CandidateCard = ({
             src={imageSrc}
             alt={`Pasangan Calon ${leaderName} & ${viceLeaderName}`}
             className="candidate-card-image"
+            style={{ objectFit: imageFit }}
           />
         ) : (
           <svg
