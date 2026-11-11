@@ -16,6 +16,7 @@ export { default as LoginCard } from './component/card/LoginCard';
 export { default as InputField } from './component/input/InputField';
 export { default as CandidateCard } from './component/card/CandidateCard';
 export { default as InstructionBanner } from './component/banner/InstructionBanner';
+export { Dropdown } from './component/button/Dropdown';
 
 // Export Icons
 export { default as CrownIcon } from './component/icon/CrownIcon';
