@@ -3,13 +3,15 @@ import logoUper from '../../assets/logo-UP.svg';
 import logoHmik from '../../assets/logo-hmik.svg';
 import './Navbar.css';
 
-export const Navbar = ({ activeMenu: initialActive = 'Beranda', onMenuClick }) => {
+export const Navbar = ({ 
+    activeMenu: initialActive = 'Beranda', 
+    onMenuClick,
+    menuItems = ['Beranda', 'Tentang Kami', 'Departemen', 'Modul Belajar']
+}) => {
     const [activeMenu, setActiveMenu] = useState(initialActive);
     const [indicatorStyle, setIndicatorStyle] = useState({});
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navRefs = useRef([]);
-
-    const menuItems = ['Beranda', 'Tentang Kami', 'Departemen'];
 
     useEffect(() => {
         const activeIndex = menuItems.indexOf(activeMenu);
