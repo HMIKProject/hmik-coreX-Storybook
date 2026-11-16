@@ -22,6 +22,10 @@ const DEFAULT_MENU_ITEMS = [
     path: '/admin/organisasi',
     label: 'Struktur Organisasi',
     icon: (isActive) => <StructureIcon width={22} height={22} color={isActive ? '#2B2B2B' : '#FFFFFF'} />,
+    children: [
+      { path: '/admin/organisasi', label: 'Bagan & Departemen' },
+      { path: '/admin/organisasi/proker', label: 'Program Kerja' },
+    ],
   },
   {
     path: '/admin/pemira',
@@ -54,16 +58,23 @@ export const AdminSidebar = ({
   className = '',
   ...props
 }) => {
-  const isPemiraActive = activeRoute.startsWith('/admin/pemira');
-  const [expandedMenus, setExpandedMenus] = useState({
-    '/admin/pemira': isPemiraActive,
+  const [expandedMenus, setExpandedMenus] = useState(() => {
+    const initial = {};
+    menuItems.forEach((item) => {
+      if (item.children && activeRoute.startsWith(item.path)) {
+        initial[item.path] = true;
+      }
+    });
+    return initial;
   });
 
   useEffect(() => {
-    if (activeRoute.startsWith('/admin/pemira')) {
-      setExpandedMenus((prev) => ({ ...prev, '/admin/pemira': true }));
-    }
-  }, [activeRoute]);
+    menuItems.forEach((item) => {
+      if (item.children && activeRoute.startsWith(item.path)) {
+        setExpandedMenus((prev) => ({ ...prev, [item.path]: true }));
+      }
+    });
+  }, [activeRoute, menuItems]);
 
   const toggleSubMenu = (menuPath) => {
     setExpandedMenus((prev) => ({
