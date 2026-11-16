@@ -23,7 +23,7 @@ const DEFAULT_MENU_ITEMS = [
     label: 'Struktur Organisasi',
     icon: (isActive) => <StructureIcon width={22} height={22} color={isActive ? '#2B2B2B' : '#FFFFFF'} />,
     children: [
-      { path: '/admin/organisasi', label: 'Bagan & Departemen' },
+      { path: '/admin/organisasi', label: 'Departemen dan Divisi' },
       { path: '/admin/organisasi/proker', label: 'Program Kerja' },
     ],
   },
@@ -119,9 +119,15 @@ export const AdminSidebar = ({
                   }`.trim()}
                   onClick={() => {
                     if (hasChildren) {
-                      toggleSubMenu(item.path);
-                      if (onNavigate && !isItemActive) {
-                        onNavigate(item.path);
+                      if (!isItemActive) {
+                        // Jika belum aktif, langsung expand dan navigasi ke halaman pertama pada 1 kali klik
+                        setExpandedMenus((prev) => ({ ...prev, [item.path]: true }));
+                        if (onNavigate) {
+                          onNavigate(item.path);
+                        }
+                      } else {
+                        // Jika sudah aktif, klik berfungsi sebagai toggle accordion
+                        toggleSubMenu(item.path);
                       }
                     } else if (onNavigate) {
                       onNavigate(item.path);
@@ -149,7 +155,10 @@ export const AdminSidebar = ({
                             className={`hmik-admin-submenu-item ${
                               isSubActive ? 'hmik-admin-submenu-item--active' : ''
                             }`.trim()}
-                            onClick={() => onNavigate && onNavigate(sub.path)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (onNavigate) onNavigate(sub.path);
+                            }}
                             role="button"
                             tabIndex={0}
                           >
