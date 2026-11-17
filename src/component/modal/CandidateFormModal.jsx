@@ -23,11 +23,18 @@ export const CandidateFormModal = ({
     visi: '',
     misi: '',
     foto_paslon: '',
+    foto_ketua: '',
+    foto_wakil: '',
+    logo_kabinet: '',
   });
 
-  const [previewUrl, setPreviewUrl] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
-  const fileInputRef = useRef(null);
+  const [files, setFiles] = useState({ paslon: null, ketua: null, wakil: null, logo: null });
+  const [previews, setPreviews] = useState({ paslon: '', ketua: '', wakil: '', logo: '' });
+
+  const fileRefPaslon = useRef(null);
+  const fileRefKetua = useRef(null);
+  const fileRefWakil = useRef(null);
+  const fileRefLogo = useRef(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -42,8 +49,16 @@ export const CandidateFormModal = ({
           visi: initialData.visi || '',
           misi: initialData.misi || '',
           foto_paslon: initialData.foto_paslon || '',
+          foto_ketua: initialData.foto_ketua || '',
+          foto_wakil: initialData.foto_wakil || '',
+          logo_kabinet: initialData.logo_kabinet || '',
         });
-        setPreviewUrl(initialData.foto_paslon || '');
+        setPreviews({
+          paslon: initialData.foto_paslon || '',
+          ketua: initialData.foto_ketua || '',
+          wakil: initialData.foto_wakil || '',
+          logo: initialData.logo_kabinet || '',
+        });
       } else {
         setFormData({
           nomor_urut: (initialData && initialData.nomor_urut) || 1,
@@ -55,10 +70,13 @@ export const CandidateFormModal = ({
           visi: '',
           misi: '',
           foto_paslon: '',
+          foto_ketua: '',
+          foto_wakil: '',
+          logo_kabinet: '',
         });
-        setPreviewUrl('');
+        setPreviews({ paslon: '', ketua: '', wakil: '', logo: '' });
       }
-      setSelectedFile(null);
+      setFiles({ paslon: null, ketua: null, wakil: null, logo: null });
     }
   }, [isOpen, mode, initialData]);
 
@@ -70,12 +88,11 @@ export const CandidateFormModal = ({
     }
   };
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (field, e) => {
     const file = e.target.files?.[0];
     if (file) {
-      setSelectedFile(file);
-      const objectUrl = URL.createObjectURL(file);
-      setPreviewUrl(objectUrl);
+      setFiles((prev) => ({ ...prev, [field]: file }));
+      setPreviews((prev) => ({ ...prev, [field]: URL.createObjectURL(file) }));
     }
   };
 
@@ -92,8 +109,14 @@ export const CandidateFormModal = ({
     if (onSubmit) {
       onSubmit({
         ...formData,
-        file: selectedFile,
-        foto_paslon: previewUrl || formData.foto_paslon,
+        file_paslon: files.paslon,
+        file_ketua: files.ketua,
+        file_wakil: files.wakil,
+        file_logo: files.logo,
+        foto_paslon: previews.paslon || formData.foto_paslon,
+        foto_ketua: previews.ketua || formData.foto_ketua,
+        foto_wakil: previews.wakil || formData.foto_wakil,
+        logo_kabinet: previews.logo || formData.logo_kabinet,
       });
     }
   };
@@ -129,30 +152,29 @@ export const CandidateFormModal = ({
 
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="hmik-candidate-form">
-          {/* Top Section: Foto Upload / Preview + Nama Paslon */}
+          {/* Top Section: Foto Paslon Utama + Nama Ketua/Wakil */}
           <div className="hmik-candidate-top-section">
-            {/* Foto Upload Field */}
             <div className="hmik-candidate-photo-field">
-              <label className="hmik-candidate-label">Foto Paslon</label>
+              <label className="hmik-candidate-label">Foto Paslon (Bilik Suara)</label>
               <input
-                ref={fileInputRef}
+                ref={fileRefPaslon}
                 type="file"
                 accept="image/png, image/jpeg, image/jpg"
                 style={{ display: 'none' }}
-                onChange={handleFileChange}
+                onChange={(e) => handleFileChange('paslon', e)}
               />
 
-              {previewUrl ? (
+              {previews.paslon ? (
                 <div className="hmik-candidate-photo-preview-wrap">
                   <img
-                    src={previewUrl}
-                    alt="Preview Kandidat"
+                    src={previews.paslon}
+                    alt="Preview Paslon"
                     className="hmik-candidate-photo-preview-img"
                   />
                   <button
                     type="button"
                     className="hmik-candidate-photo-change-btn"
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={() => fileRefPaslon.current?.click()}
                   >
                     Ganti Foto
                   </button>
@@ -160,17 +182,17 @@ export const CandidateFormModal = ({
               ) : (
                 <div
                   className="hmik-candidate-photo-dropzone"
-                  onClick={() => fileInputRef.current?.click()}
+                  onClick={() => fileRefPaslon.current?.click()}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
-                      fileInputRef.current?.click();
+                      fileRefPaslon.current?.click();
                     }
                   }}
                 >
                   <UploadIcon width={32} height={32} alt="Unggah Foto" />
-                  <span className="hmik-candidate-upload-label">Unggah Foto</span>
+                  <span className="hmik-candidate-upload-label">Foto Berdua</span>
                   <span className="hmik-candidate-upload-hint">
                     Format: JPG, PNG<br />(Maks. 2MB)
                   </span>
@@ -182,7 +204,7 @@ export const CandidateFormModal = ({
             <div className="hmik-candidate-field" style={{ gap: '12px' }}>
               <div className="hmik-candidate-field">
                 <label htmlFor="input-nama-ketua" className="hmik-candidate-label">
-                  Nama Ketua
+                  Nama Calon Ketua
                 </label>
                 <input
                   id="input-nama-ketua"
@@ -198,7 +220,7 @@ export const CandidateFormModal = ({
 
               <div className="hmik-candidate-field">
                 <label htmlFor="input-nama-wakil" className="hmik-candidate-label">
-                  Nama Wakil Ketua
+                  Nama Calon Wakil Ketua
                 </label>
                 <input
                   id="input-nama-wakil"
@@ -243,42 +265,129 @@ export const CandidateFormModal = ({
                 required
                 value={formData.nama_kabinet}
                 onChange={handleChange}
-                placeholder="Masukkan nama kabinet"
+                placeholder="Masukkan nama kabinet yang diusung"
                 className="hmik-candidate-input"
               />
             </div>
           </div>
 
-          {/* NIM Ketua & Wakil (Optional) */}
+          {/* NIM Ketua & Wakil */}
           <div className="hmik-candidate-field-row">
             <div className="hmik-candidate-field">
               <label htmlFor="input-nim-ketua" className="hmik-candidate-label">
-                NIM Ketua <span className="hmik-candidate-label-optional">(Opsional)</span>
+                NIM Ketua <span className="hmik-candidate-label-optional">(Wajib untuk BPH)</span>
               </label>
               <input
                 id="input-nim-ketua"
                 name="nim_ketua"
                 type="text"
+                required
                 value={formData.nim_ketua}
                 onChange={handleChange}
-                placeholder="Contoh: 10121001"
+                placeholder="Contoh: 105223001"
                 className="hmik-candidate-input"
               />
             </div>
 
             <div className="hmik-candidate-field">
               <label htmlFor="input-nim-wakil" className="hmik-candidate-label">
-                NIM Wakil <span className="hmik-candidate-label-optional">(Opsional)</span>
+                NIM Wakil <span className="hmik-candidate-label-optional">(Wajib untuk BPH)</span>
               </label>
               <input
                 id="input-nim-wakil"
                 name="nim_wakil"
                 type="text"
+                required
                 value={formData.nim_wakil}
                 onChange={handleChange}
-                placeholder="Contoh: 10121002"
+                placeholder="Contoh: 105223002"
                 className="hmik-candidate-input"
               />
+            </div>
+          </div>
+
+          {/* Aset Visual Pelantikan MPIK (Opsi A) */}
+          <div className="hmik-candidate-pelantikan-assets">
+            <div className="hmik-candidate-pelantikan-title">
+              <span>🏛️ Aset Pelantikan BPH & Kabinet (MPIK)</span>
+              <span className="hmik-candidate-pelantikan-hint">Otomatis dipromosikan ke Struktur Organisasi</span>
+            </div>
+
+            <div className="hmik-candidate-pelantikan-grid">
+              {/* Foto Formal Ketua */}
+              <div className="hmik-candidate-compact-field">
+                <span className="hmik-candidate-compact-label">Foto Ketua (Jas)</span>
+                <input
+                  ref={fileRefKetua}
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  style={{ display: 'none' }}
+                  onChange={(e) => handleFileChange('ketua', e)}
+                />
+                {previews.ketua ? (
+                  <div className="hmik-candidate-compact-preview">
+                    <img src={previews.ketua} alt="Foto Ketua" className="hmik-candidate-compact-preview-img" />
+                    <button type="button" className="hmik-candidate-compact-change-btn" onClick={() => fileRefKetua.current?.click()}>
+                      Ganti
+                    </button>
+                  </div>
+                ) : (
+                  <div className="hmik-candidate-compact-dropzone" onClick={() => fileRefKetua.current?.click()}>
+                    <UploadIcon width={20} height={20} />
+                    <span style={{ fontSize: '10px', fontWeight: 600 }}>Foto Ketua</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Foto Formal Wakil */}
+              <div className="hmik-candidate-compact-field">
+                <span className="hmik-candidate-compact-label">Foto Wakil (Jas)</span>
+                <input
+                  ref={fileRefWakil}
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg"
+                  style={{ display: 'none' }}
+                  onChange={(e) => handleFileChange('wakil', e)}
+                />
+                {previews.wakil ? (
+                  <div className="hmik-candidate-compact-preview">
+                    <img src={previews.wakil} alt="Foto Wakil" className="hmik-candidate-compact-preview-img" />
+                    <button type="button" className="hmik-candidate-compact-change-btn" onClick={() => fileRefWakil.current?.click()}>
+                      Ganti
+                    </button>
+                  </div>
+                ) : (
+                  <div className="hmik-candidate-compact-dropzone" onClick={() => fileRefWakil.current?.click()}>
+                    <UploadIcon width={20} height={20} />
+                    <span style={{ fontSize: '10px', fontWeight: 600 }}>Foto Wakil</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Logo Resmi Kabinet */}
+              <div className="hmik-candidate-compact-field">
+                <span className="hmik-candidate-compact-label">Logo Kabinet</span>
+                <input
+                  ref={fileRefLogo}
+                  type="file"
+                  accept="image/png, image/jpeg, image/jpg, image/svg+xml"
+                  style={{ display: 'none' }}
+                  onChange={(e) => handleFileChange('logo', e)}
+                />
+                {previews.logo ? (
+                  <div className="hmik-candidate-compact-preview">
+                    <img src={previews.logo} alt="Logo Kabinet" className="hmik-candidate-compact-preview-img" style={{ objectFit: 'contain' }} />
+                    <button type="button" className="hmik-candidate-compact-change-btn" onClick={() => fileRefLogo.current?.click()}>
+                      Ganti
+                    </button>
+                  </div>
+                ) : (
+                  <div className="hmik-candidate-compact-dropzone" onClick={() => fileRefLogo.current?.click()}>
+                    <UploadIcon width={20} height={20} />
+                    <span style={{ fontSize: '10px', fontWeight: 600 }}>Logo Kabinet</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
