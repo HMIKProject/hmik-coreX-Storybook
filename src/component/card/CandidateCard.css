@@ -56,6 +56,71 @@
   display: block;
 }
 
+/* Duo Frame Paslon */
+.candidate-card-duo-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.candidate-card-duo-half {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid #2B2B2B;
+  background-color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidate-card-duo-half:last-child {
+  border-right: none;
+}
+
+.candidate-card-duo-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.candidate-card-duo-placeholder {
+  font-size: 3rem;
+}
+
+.candidate-card-duo-label {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(43, 43, 43, 0.85);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Baris Nama Kabinet dengan Logo */
+.candidate-card-cabinet-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.candidate-card-cabinet-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
 /* Tag Nama Kabinet */
 .candidate-card-cabinet {
   font-size: 13px;
@@ -77,9 +142,26 @@
 
 .candidate-card-person {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.candidate-card-mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #2B2B2B;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 1px 1px 0px #2B2B2B;
+}
+
+.candidate-card-person-details {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .candidate-card-name {

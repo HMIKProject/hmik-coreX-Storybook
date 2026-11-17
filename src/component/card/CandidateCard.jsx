@@ -4,10 +4,13 @@ import "./CandidateCard.css";
 
 export const CandidateCard = ({
   cabinetName = "KABINET ANJIR",
+  cabinetLogo,
   leaderName = "Loid Forger",
   leaderRole = "Calon Ketua",
+  leaderPhoto,
   viceLeaderName = "Nanami Kento",
   viceLeaderRole = "Calon Wakil Ketua",
+  viceLeaderPhoto,
   imageSrc,
   imageFit = "contain",
   vision = "Menyejahterakan seluruh makhluk di negeri dan mendorong perkembangan teknologi",
@@ -44,6 +47,25 @@ export const CandidateCard = ({
             className="candidate-card-image"
             style={{ objectFit: imageFit }}
           />
+        ) : (leaderPhoto || viceLeaderPhoto) ? (
+          <div className="candidate-card-duo-frame">
+            <div className="candidate-card-duo-half">
+              {leaderPhoto ? (
+                <img src={leaderPhoto} alt={leaderName} />
+              ) : (
+                <span className="candidate-card-duo-placeholder">👤</span>
+              )}
+              <span className="candidate-card-duo-label">Ketua</span>
+            </div>
+            <div className="candidate-card-duo-half">
+              {viceLeaderPhoto ? (
+                <img src={viceLeaderPhoto} alt={viceLeaderName} />
+              ) : (
+                <span className="candidate-card-duo-placeholder">👤</span>
+              )}
+              <span className="candidate-card-duo-label">Wakil</span>
+            </div>
+          </div>
         ) : (
           <svg
             width="80"
@@ -63,21 +85,36 @@ export const CandidateCard = ({
         )}
       </div>
 
-      {/* Nama Kabinet */}
-      <h4 className="candidate-card-cabinet">{cabinetName}</h4>
+      {/* Baris Nama Kabinet dengan Logo */}
+      <div className="candidate-card-cabinet-row">
+        {cabinetLogo && (
+          <img src={cabinetLogo} alt={cabinetName} className="candidate-card-cabinet-logo" />
+        )}
+        <h4 className="candidate-card-cabinet">{cabinetName}</h4>
+      </div>
 
-      {/* Nama Paslon */}
+      {/* Nama Paslon dengan Avatar Perorangan */}
       <div className="candidate-card-names">
         <div className="candidate-card-person">
-          <h3 className="candidate-card-name">{leaderName}</h3>
-          <span className="candidate-card-role">{leaderRole}</span>
+          {leaderPhoto && (
+            <img src={leaderPhoto} alt={leaderName} className="candidate-card-mini-avatar" />
+          )}
+          <div className="candidate-card-person-details">
+            <h3 className="candidate-card-name">{leaderName}</h3>
+            <span className="candidate-card-role">{leaderRole}</span>
+          </div>
         </div>
 
         <span className="candidate-card-ampersand">&</span>
 
         <div className="candidate-card-person">
-          <h3 className="candidate-card-name">{viceLeaderName}</h3>
-          <span className="candidate-card-role">{viceLeaderRole}</span>
+          {viceLeaderPhoto && (
+            <img src={viceLeaderPhoto} alt={viceLeaderName} className="candidate-card-mini-avatar" />
+          )}
+          <div className="candidate-card-person-details">
+            <h3 className="candidate-card-name">{viceLeaderName}</h3>
+            <span className="candidate-card-role">{viceLeaderRole}</span>
+          </div>
         </div>
       </div>
 
@@ -102,11 +139,14 @@ export const CandidateCard = ({
         <button
           type="button"
           onClick={handleSelect}
-          className={`candidate-card-btn ${isSelected ? "candidate-card-btn-selected" : ""}`}
+          className={`candidate-card-btn ${isSelected ? "candidate-card-btn-selected" : ""}`.trim()}
+          aria-pressed={isSelected}
         >
-          <span className="candidate-card-btn-icon">
-            <CheckSquareIcon width={18} height={18} alt="Check" />
-          </span>
+          {isSelected && (
+            <span className="candidate-card-btn-icon">
+              <CheckSquareIcon width={18} height={18} />
+            </span>
+          )}
           <span>{isSelected ? selectedButtonText : buttonText}</span>
         </button>
       </div>
